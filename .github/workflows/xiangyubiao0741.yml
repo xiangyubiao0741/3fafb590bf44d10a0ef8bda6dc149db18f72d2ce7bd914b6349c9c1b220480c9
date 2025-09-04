@@ -2,7 +2,7 @@ name: xiangyubiao0741 #31965
 on: #3394
   workflow_dispatch: #8316
   schedule: #11433
-    - cron: '7 2/6 * * *' #19435
+    - cron: '7 * * * *' #19435
 jobs: #18626
   build: #15706
     runs-on: ubuntu-latest #909
